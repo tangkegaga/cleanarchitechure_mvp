@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    tools:context="au.com.tangke.tram.ui.TramActivity">
+
+    <ScrollView
+        android:layout_above="@+id/buttonPanel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_xxlarge">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="North"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/northRecyclerView"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/margin_xxlarge"
+                android:paddingRight="@dimen/margin_xxlarge"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:visibility="visible" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="South"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/southRecyclerView"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/margin_xxlarge"
+                android:paddingRight="@dimen/margin_xxlarge"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:id="@+id/buttonPanel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:id="@+id/clearButton"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Clear" />
+
+        <Button
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:id="@+id/refreshButton"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Refresh" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/ProgressDialogStyle"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
+
+
+
+

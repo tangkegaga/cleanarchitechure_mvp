@@ -1,0 +1,92 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    minSdkVersion = 24
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+
+
+    //Libraries
+    supportLibraryVersion = '28.0.0'
+    daggerVersion = '2.15'
+    roomVersion = '1.1.1'
+    androidArchVersion = '1.1.1'
+    rxJavaVersion = '2.0.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    gsonVersion = '2.3'
+    retrofitVersion = '2.3.0'
+    okHttpVersion = '3.6.0'
+    rxKotlinVersion = '0.60.0'
+    multidexVersion = '1.0.2'
+
+
+    junitVersion = '4.12'
+    runnerVersion = '1.0.2'
+    expressoVersion = '3.0.2'
+
+    mockitoVersion = '1.10.19'
+    powerMockito = '1.6.5'
+    hamcrestVersion = '1.3'
+
+    rulesVersion = '0.5'
+    mockitokotlin2Version = '2.0.0'
+    mockito4kotlinannotationVersion = '0.3.0'
+
+
+
+    dependencies = [daggerAndroidCompiler   : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+                    daggerAndroid           : "com.google.dagger:dagger-android-support:${daggerVersion}",
+                    daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+                    dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+                    androidRecyclerView     : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+                    androidCardView         : "com.android.support:cardview-v7:${supportLibraryVersion}",
+                    androidDesign           : "com.android.support:design:${supportLibraryVersion}",
+                    androidCompatv7         : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+                    androidSupportv4        : "com.android.support:support-v4:${supportLibraryVersion}",
+                    rxJava                  : "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}",
+                    rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+                    javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+
+                    rxKotlin                : "io.reactivex:rxkotlin:${rxKotlinVersion}",
+                    multidex                : "com.android.support:multidex:${multidexVersion}",
+                    retrofit2               : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                    retrofit2Converter      : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                    retrofit2RxAdapter      : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+                    gson                    : "com.google.code.gson:gson:${gsonVersion}",
+                    okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+                    okhttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                    okhttpUrlconnection     : "com.squareup.okhttp3:okhttp-urlconnection:${okHttpVersion}",
+                    kotlinStdlib            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+                    androidArchExt          : "android.arch.lifecycle:extensions:${androidArchVersion}",
+                    androidArchCompiler     : "android.arch.lifecycle:compiler:${androidArchVersion}",
+                    room                    : "android.arch.persistence.room:runtime:${roomVersion}",
+                    roomCompiler            : "android.arch.persistence.room:compiler:${roomVersion}",
+                    roomRxJava              : "android.arch.persistence.room:rxjava2:${roomVersion}",
+                    lcReactiveStreams       : "android.arch.lifecycle:reactivestreams:${androidArchVersion}",
+
+                    //testing
+                    mockitocore             : "org.mockito:mockito-core:2.23.0",
+                    mockitoall              : "org.mockito:mockito-all:${mockitoVersion}",
+                    mockitokotlin2          : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitokotlin2Version}",
+                    mockito4kotlinannotation: "org.mockito4kotlin:annotation:${mockito4kotlinannotationVersion}",
+                    hamcrest                : "org.hamcrest:hamcrest-all:${hamcrestVersion}",
+                    powermockmodule         : "org.powermock:powermock-module-junit4:${powerMockito}",
+                    powermockapi            : "org.powermock:powermock-api-mockito:${powerMockito}",
+                    coretesting             : "android.arch.core:core-testing:1.1.1",
+                    testrunner              : "com.android.support.test:runner:${runnerVersion}",
+                    testrules               : "com.android.support.test:rules:${rulesVersion}",
+                    espressocore            : "com.android.support.test.espresso:espresso-core:${expressoVersion}",
+                    junit                   : "junit:junit:${junitVersion}"
+
+
+    ]
+
+
+}
